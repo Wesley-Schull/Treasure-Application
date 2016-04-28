@@ -17,4 +17,7 @@ public class Wallet {
         this.copper %= 10;
         return this;
     }
+    public String toString(){
+        return this.gold + "gp " + this.silver + "sp " + this.copper + "cp";
+    }
 }

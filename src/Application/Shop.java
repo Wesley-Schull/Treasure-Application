@@ -1,15 +1,15 @@
 package Application;
 
 public class Shop {
-    Wallet obj = new Wallet(0, 0, 0);
+    Wallet playerWallet = new Wallet(0, 0, 0);
     Wallet priceOfObject = new Wallet(0, 0, 0);
-    public void shopKeep(){
-        obj.copper = changeCalculator();
+    public void makePurchase(){
+        playerWallet.copper = calculateChange();
         updateGoldWallet(0);
         updateSilverWallet(0);
-        obj.simplifyWallet();
+        playerWallet.simplifyWallet();
     }
-    public int changeCalculator(){ //helper to shop
+    public int calculateChange(){ //helper to shop
         int copper = walletToCopper();
         int price = priceToCopper();
         if(copper-price<0) {
@@ -17,20 +17,23 @@ public class Shop {
         }
         return copper-price;
     }
+//    public Wallet retWallet(){
+//        return playerWallet   ;
+//    }
     public int walletToCopper() { //helper to wallet
-        return (obj.gold*100) + (obj.silver*10) + (obj.copper);
+        return (playerWallet.gold*100) + (playerWallet.silver*10) + (playerWallet.copper);
     }
     public int priceToCopper() { //helper to priceOfObject
         return (priceOfObject.gold*100) + (priceOfObject.silver*10) + (priceOfObject.copper);
     }
     public void updateGoldWallet(int gold){
-        obj.gold = gold;
+        playerWallet.gold = gold;
     }
     public void updateSilverWallet(int silver){
-        obj.silver = silver;
+        playerWallet.silver = silver;
     }
     public void updateCopperWallet(int copper){
-        obj.copper = copper;
+        playerWallet.copper = copper;
     }
     public void updateGoldPrice(int gold){
         priceOfObject.gold = gold;

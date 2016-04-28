@@ -14,21 +14,21 @@ public class Test {
         Shop obj = new Shop();
         obj.updateGoldWallet(5);
         obj.updateGoldPrice(3);
-        Assert.assertEquals(obj.changeCalculator(),200);
+        Assert.assertEquals(obj.calculateChange(),200);
     }
     @org.junit.Test
     public void TestTenGoldPurchase(){
         Shop obj = new Shop();
         obj.updateGoldWallet(10);
         obj.updateGoldPrice(5);
-        Assert.assertEquals(obj.changeCalculator(),500);
+        Assert.assertEquals(obj.calculateChange(),500);
     }
     @org.junit.Test
     public void TestNegativeNumber(){
         Shop obj = new Shop();
         obj.updateGoldWallet(10);
         obj.updateGoldPrice(20);
-        Assert.assertEquals(obj.changeCalculator(),0);
+        Assert.assertEquals(obj.calculateChange(),0);
     }
     @org.junit.Test
     public void TestGetGold(){
@@ -55,7 +55,7 @@ public class Test {
         obj.updateSilverWallet(11);
         obj.updateGoldPrice(5);
         obj.updateSilverPrice(10);
-        Assert.assertEquals(obj.changeCalculator(),10);
+        Assert.assertEquals(obj.calculateChange(),10);
     }
     @org.junit.Test
     public void TestGoldAndCopperPurchaseTest(){
@@ -64,7 +64,7 @@ public class Test {
         obj.updateCopperWallet(55);
         obj.updateGoldPrice(3);
         obj.updateCopperPrice(25);
-        Assert.assertEquals(obj.changeCalculator(),730);
+        Assert.assertEquals(obj.calculateChange(),730);
     }
     @org.junit.Test
     public void TestWalletToCopper_Gold(){
@@ -113,7 +113,7 @@ public class Test {
         Shop obj = new Shop();
         obj.updateGoldPrice(10);
         obj.updateGoldWallet(20);
-        obj.shopKeep();
+        obj.makePurchase();
         Assert.assertEquals(obj.walletToCopper(), 1000);
     }
     @org.junit.Test
@@ -123,7 +123,7 @@ public class Test {
         obj.updateSilverPrice(2);
         obj.updateSilverWallet(5);
         obj.updateGoldWallet(20);
-        obj.shopKeep();
+        obj.makePurchase();
         Assert.assertEquals(obj.walletToCopper(), 1230);
     }
     @org.junit.Test
