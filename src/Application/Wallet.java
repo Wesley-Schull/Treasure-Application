@@ -11,8 +11,6 @@ public class Wallet {
         this.copper = copper;
     }
     public Wallet simplifyWallet(){
-        this.gold += this.copper/100;
-        this.copper %= 100;
         this.silver += this.copper/10;
         this.copper %= 10;
         this.gold += this.silver/10;

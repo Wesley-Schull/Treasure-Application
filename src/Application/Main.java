@@ -30,5 +30,6 @@ public class Main extends Application {
         System.out.println("testWallet1 = " + testWallet1.toString());
         System.out.println("testShop1.playerWallet = " + testShop1.playerWallet.toString());
 
+
     }
 }
