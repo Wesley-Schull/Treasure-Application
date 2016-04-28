@@ -18,6 +18,10 @@ public class Main extends Application {
         //launch(args);     <-- This is the GUI launcher. The following was some tests I conducted to see how the functions are used.
         Wallet testWallet1 = new Wallet(10, 20, 3014);
         System.out.println("testWallet1 = " + testWallet1.toString());
+        testWallet1.simplifyWallet();
+        System.out.println("testWallet1 = " + testWallet1.toString());
+        testWallet1.simplifyWallet();
+        System.out.println("testWallet1 = " + testWallet1.toString());
         Shop testShop1 = new Shop();
         testShop1.playerWallet = testWallet1;
         System.out.println("testShop1.playerWallet = " + testShop1.playerWallet.toString());
