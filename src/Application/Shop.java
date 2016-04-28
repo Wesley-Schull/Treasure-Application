@@ -17,9 +17,6 @@ public class Shop {
         }
         return copper-price;
     }
-//    public Wallet retWallet(){
-//        return playerWallet   ;
-//    }
     public int walletToCopper() { //helper to wallet
         return (playerWallet.gold*100) + (playerWallet.silver*10) + (playerWallet.copper);
     }
