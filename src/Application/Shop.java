@@ -1,8 +1,8 @@
 package Application;
 
 public class Shop {
-    Wallet playerWallet = new Wallet(0, 0, 0);
-    Wallet priceOfObject = new Wallet(0, 0, 0);
+    public Wallet playerWallet = new Wallet(0, 0, 0);
+    public Wallet priceOfObject = new Wallet(0, 0, 0);
     public void makePurchase(){
         playerWallet.copper = calculateChange();
         updateGoldWallet(0);

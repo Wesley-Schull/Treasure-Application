@@ -70,14 +70,14 @@ public class Test {
     public void TestWalletToCopper_Gold(){
         Shop obj = new Shop();
         obj.updateGoldWallet(10);
-        Assert.assertEquals(obj.walletToCopper(), 1000);
+        Assert.assertEquals(obj.playerWallet.toCopper(), 1000);
     }
     @org.junit.Test
     public void TestWalletToCopper_GoldSilver(){
         Shop obj = new Shop();
         obj.updateGoldWallet(10);
         obj.updateSilverWallet(5);
-        Assert.assertEquals(obj.walletToCopper(), 1050);
+        Assert.assertEquals(obj.playerWallet.toCopper(), 1050);
     }
     @org.junit.Test
     public void TestWalletToCopper_GoldSilverCopper(){
@@ -85,20 +85,20 @@ public class Test {
         obj.updateGoldWallet(10);
         obj.updateSilverWallet(5);
         obj.updateCopperWallet(2);
-        Assert.assertEquals(obj.walletToCopper(), 1052);
+        Assert.assertEquals(obj.playerWallet.toCopper(), 1052);
     }
     @org.junit.Test
     public void TestPriceToCopper_Gold(){
         Shop obj = new Shop();
         obj.updateGoldPrice(10);
-        Assert.assertEquals(obj.priceToCopper(), 1000);
+        Assert.assertEquals(obj.priceOfObject.toCopper(), 1000);
     }
     @org.junit.Test
     public void TestPriceToCopper_GoldSilver(){
         Shop obj = new Shop();
         obj.updateGoldPrice(10);
         obj.updateSilverPrice(5);
-        Assert.assertEquals(obj.priceToCopper(), 1050);
+        Assert.assertEquals(obj.priceOfObject.toCopper(), 1050);
     }
     @org.junit.Test
     public void TestPriceToCopper_GoldSilverCopper(){
@@ -106,7 +106,7 @@ public class Test {
         obj.updateGoldPrice(10);
         obj.updateSilverPrice(5);
         obj.updateCopperPrice(2);
-        Assert.assertEquals(obj.priceToCopper(), 1052);
+        Assert.assertEquals(obj.priceOfObject.toCopper(), 1052);
     }
     @org.junit.Test
     public void TestShopKeepGold(){
@@ -114,7 +114,7 @@ public class Test {
         obj.updateGoldPrice(10);
         obj.updateGoldWallet(20);
         obj.makePurchase();
-        Assert.assertEquals(obj.walletToCopper(), 1000);
+        Assert.assertEquals(obj.playerWallet.toCopper(), 1000);
     }
     @org.junit.Test
     public void TestShopKeepSilver(){
@@ -124,7 +124,7 @@ public class Test {
         obj.updateSilverWallet(5);
         obj.updateGoldWallet(20);
         obj.makePurchase();
-        Assert.assertEquals(obj.walletToCopper(), 1230);
+        Assert.assertEquals(obj.playerWallet.toCopper(), 1230);
     }
     @org.junit.Test
     public void TestSimplifyWallet(){
