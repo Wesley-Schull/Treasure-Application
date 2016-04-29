@@ -4,7 +4,6 @@ public class Wallet {
     public int gold;
     public int silver;
     public int copper;
-
     public Wallet(int gold, int silver, int copper){
         this.gold = gold;
         this.silver = silver;
