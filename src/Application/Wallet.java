@@ -17,8 +17,8 @@ public class Wallet {
         this.silver %= 10;
         return this;
     }
-    public void updateGold(int gold){
-        this.gold = gold;
+    public int toCopper(){
+        return (this.gold * 100) + (this.silver * 10) + this.copper;
     }
     public String toString(){
         return this.gold + "gp " + this.silver + "sp " + this.copper + "cp";

@@ -10,18 +10,12 @@ public class Shop {
         playerWallet.simplifyWallet();
     }
     public int calculateChange(){ //helper to shop
-        int copper = walletToCopper();
-        int price = priceToCopper();
+        int copper = playerWallet.toCopper();
+        int price = priceOfObject.toCopper();
         if(copper-price<0) {
             return 0;
         }
         return copper-price;
-    }
-    public int walletToCopper() { //helper to wallet
-        return (playerWallet.gold*100) + (playerWallet.silver*10) + (playerWallet.copper);
-    }
-    public int priceToCopper() { //helper to priceOfObject
-        return (priceOfObject.gold*100) + (priceOfObject.silver*10) + (priceOfObject.copper);
     }
     public void updateGoldWallet(int gold){
         playerWallet.gold = gold;
