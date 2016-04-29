@@ -1,0 +1,31 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:controller="Application.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" vgap="10" hgap="10">
+    <padding>
+        <Insets left="15" right="15" top="15" bottom="15"/>
+    </padding>
+    <Text text="Your Balance" style="-fx-font: BOLD 16 Tahoma;" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+    <Text text="Item's Price" style="-fx-font: BOLD 16 Tahoma;" GridPane.columnIndex="3" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+    <Text text="Gold:" style="-fx-font: NORMAL 12 Tahoma;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="playerGoldTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Text text="Gold:" style="-fx-font: NORMAL 12 Tahoma;" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+    <TextField fx:id="itemGoldTextField" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+    <Text text="Silver:" style="-fx-font: NORMAL 12 Tahoma;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="playerSilverTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Text text="Silver:" style="-fx-font: NORMAL 12 Tahoma;" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+    <TextField fx:id="itemSilverTextField" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+    <Text text="Copper:" style="-fx-font: NORMAL 12 Tahoma;" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="playerCopperTextField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Text text="Copper:" style="-fx-font: NORMAL 12 Tahoma;" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+    <TextField fx:id="itemCopperTextField" GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+    <Button fx:id="submitPlayerBalanceButton" text="Update Wallet" onAction="#submitPlayerBalanceButtonClicked" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Button fx:id="submitItemPriceButton" text="Update Price" onAction="#submitItemPriceButtonClicked" GridPane.columnIndex="4" GridPane.rowIndex="4"/>
+    <Button fx:id="purchaseItemButton" text="Purchase" onAction="#purchaseItemButtonClicked" GridPane.columnIndex="2" GridPane.rowIndex="4" visible="false"/>
+    <Label fx:id="currentBalanceLabel" style="-fx-font: NORMAL 14 Tahoma;" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2" alignment="BASELINE_CENTER"/>
+    <Label fx:id="currentPriceLabel" style="-fx-font: NORMAL 14 Tahoma;" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.columnSpan="2" alignment="BASELINE_CENTER"/>
+</GridPane>

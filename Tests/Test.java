@@ -47,8 +47,7 @@ public class Test {
         Wallet obj = new Wallet(0, 0, 0);
         obj.copper = 10;
         assertEquals(obj.copper,10);
-    }
-    @org.junit.Test
+    }@org.junit.Test
     public void TestGoldAndSilverPurchase(){
         Shop obj = new Shop();
         obj.updateGoldWallet(5);

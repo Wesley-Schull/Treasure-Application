@@ -9,9 +9,9 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("playerWallet.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("applicationPage.fxml"));
         primaryStage.setTitle("Treasure Application");
-        primaryStage.setScene(new Scene(root, 240, 200));
+        primaryStage.setScene(new Scene(root, 550, 250));
         primaryStage.show();
     }
     public static void main(String[] args) {
