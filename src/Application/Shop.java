@@ -9,7 +9,7 @@ public class Shop {
         updateSilverWallet(0);
         playerWallet.simplifyWallet();
     }
-    public int calculateChange(){ //helper to shop
+    public int calculateChange(){
         int copper = playerWallet.toCopper();
         int price = priceOfObject.toCopper();
         if(copper-price<0) {
